@@ -2,7 +2,7 @@
 	function avatarCode($entrada)
 	{
 
-		return $entrada*(-1);
+		return $entrada*-1;
 	}
 ?>
 <html>
