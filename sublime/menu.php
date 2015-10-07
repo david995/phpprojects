@@ -118,15 +118,6 @@ $lenguaje="es";
     </div>
     <div class="col-md-3">
       
-      <?php
-$array = array("Inicio", "Juego", "Instrucciones");
-
-
-foreach ($array as &$valor) {
-    $valor = $valor * 2;
-}
-
-?>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#">Home</a></li>
         <li class="dropdown">
