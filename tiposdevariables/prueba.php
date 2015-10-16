@@ -4,8 +4,9 @@
 	</head>
 	<body>
 		<?php
-			$frase="Paco es un campeon";
-			echo $frase;
+			//$frase="Paco es un campeon";
+			//echo $frase;
+			echo rand(1, 6);
 		?>
 	</body>
 </html>
