@@ -18,9 +18,9 @@
 
 include "configuracion.php";
 echo "<br>";
-include "dices.php";
 
-dadorandom();
+
+
 ?>
 
 </body>

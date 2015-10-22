@@ -20,6 +20,7 @@
 		
 		
 		switch($option){
+			
 			    case 1:
 			        ?><div class="col-sm-2"><img src='dices_img/dado_1.png'></div><?php
 			    break;
@@ -48,7 +49,8 @@
 			
 		
 	    }
-			return dadorandom;
+	    
+		
 			
 			
 		?>

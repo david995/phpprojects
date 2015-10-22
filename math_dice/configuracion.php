@@ -10,6 +10,8 @@ $array_submenu_en= array("Tradicional game","Modified game","Kid game");
 $ini=0;
 $lenguaje="en";
 
+
+
 ?>
 
 <nav class="navbar navbar-inverse">
@@ -83,16 +85,36 @@ $lenguaje="en";
     </div>
   </div>
 </nav>
- 
+<?php
+ include "dices.php";
+ ?>
 <div class="container">
+  
   <div class="row">
-    <div class="col-sm-2"><img class="dado" src="dices_img/dado_1.png"></div>
-    <div class="col-sm-2"><img class="dado" src="dices_img/dado_2.png"></div>
-    <div class="col-sm-2"><img class="dado" src="dices_img/dado_3.png"></div>
-    <div class="col-sm-2"><img class="dado" src="dices_img/dado_4.png"></div>
-    <div class="col-sm-2"><img class="dado" src="dices_img/dado_5.png"></div>
-    <div class="col-sm-2"><img class="dado" src="dices_img/dado_6.png"></div>
+    <div class="col-sm-3"><?php dadorandom(); ?></div>
+    <div class="col-sm-4"><?php dadorandom(); ?></div>
+    <div class="col-sm-4">
+      <form action="resultado.php" style="margin-top:50px; margin-left:30px; border:solid; padding:1em;" >
+        
+        <label>
+          OPERACIÓN DE LOS DADOS
+        </label>
+        <br>
+        DADO 1: <input type="text" name="dado1"/>
+        <br>
+        <br>
+        +&nbsp;<input type="radio" name="suma" value="+"/>
+        -&nbsp;<input type="radio" name="suma" value="-"/>
+        <br>
+        <br>
+        DADO 2: <input type="text" name="dado2"/>
+        <br>
+        <br>
+        <input type="submit" name="submit"/>
+      </form>
+    </div>
   </div>
 </div>
+
 	     
 
