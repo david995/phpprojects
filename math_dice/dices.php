@@ -11,49 +11,49 @@
   <div class="row">
 	  
 		<?php
+		
+		
 			
-		
-		function dadorandom(){
-		    
-		    
-            $option=rand(1, 6);
-		
-		
-		switch($option){
-			
-			    case 1:
-			        ?><div class="col-sm-2"><img src='dices_img/dado_1.png'></div><?php
-			    break;
-
-			    case 2:
-			         ?><div class="col-sm-2"><img src='dices_img/dado_2.png'></div><?php
-			    break;
-			        
-			    case 3:
-			         ?><div class="col-sm-2"><img src='dices_img/dado_3.png'></div><?php
-			    break;
-			    
-			    case 4:
-			         ?><div class="col-sm-2"><img src='dices_img/dado_4.png'></div><?php
-			    break;
-			    
-			    case 5:
-			         ?><div class="col-sm-2"><img src='dices_img/dado_5.png'></div><?php
-			    break;
-			    
-			    case 6:
-			         ?><div class="col-sm-2"><img src='dices_img/dado_6.png'></div><?php
-			    break;
-			    
+			function random(){
+				$numrandom=rand(1, 6);
+				return $numrandom;
 			}
 			
-		
-	    }
+			$valor1=random();
+      $valor2=random();
+
 	    
-		
-			
 			
 		?>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"><img src='dices_img/dado_<?=$valor1?>.png'></div>
+    <div class="col-sm-4"><img src='dices_img/dado_<?=$valor2?>.png'></div>
+    <div class="col-sm-4">
+      <form action="resultado.php?valor1=$option" style="margin-top:50px; margin-left:30px; border:solid; padding:1em;" >
+        
+        <label>
+          OPERACIÓN DE LOS DADOS
+        </label>
+        <br>
+        DADO 1: <input type="text" name="dado1"/>
+        <br>
+        <br>
+        + &nbsp;<input type="radio" name="operacion" value="+"/>
+        - &nbsp;<input type="radio" name="operacion" value="-"/>
+        <input type="hidden" name="valor1oculto" value="<?=$valor1;?>"/>
+        <input type="hidden" name="valor2oculto" value="<?=$valor2;?>"/>
+        <br>
+        <br>
+        DADO 2: <input type="text" name="dado2"/>
+        <br>
+        <br>
+        <input type="submit" name="submit"/>
+      </form>
+    </div>
+  </div>
+</div>
+
 		</div>
 	</div>
 	</body>

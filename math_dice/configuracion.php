@@ -8,7 +8,7 @@ $array_en = array("Math Dice","Home", "Game", "Instructions");
 $array_submenu_en= array("Tradicional game","Modified game","Kid game");
 
 $ini=0;
-$lenguaje="en";
+$lenguaje="es";
 
 
 
@@ -51,6 +51,8 @@ $lenguaje="en";
                 echo "</li>";
               }//SEGUNDO IF
             }//PRIMER FOR
+            
+            
       echo"</ul>";
           }//IF LENGUAJE ESPAÑOL
       
@@ -88,33 +90,6 @@ $lenguaje="en";
 <?php
  include "dices.php";
  ?>
-<div class="container">
-  
-  <div class="row">
-    <div class="col-sm-3"><?php dadorandom(); ?></div>
-    <div class="col-sm-4"><?php dadorandom(); ?></div>
-    <div class="col-sm-4">
-      <form action="resultado.php" style="margin-top:50px; margin-left:30px; border:solid; padding:1em;" >
-        
-        <label>
-          OPERACIÓN DE LOS DADOS
-        </label>
-        <br>
-        DADO 1: <input type="text" name="dado1"/>
-        <br>
-        <br>
-        +&nbsp;<input type="radio" name="suma" value="+"/>
-        -&nbsp;<input type="radio" name="suma" value="-"/>
-        <br>
-        <br>
-        DADO 2: <input type="text" name="dado2"/>
-        <br>
-        <br>
-        <input type="submit" name="submit"/>
-      </form>
-    </div>
-  </div>
-</div>
 
 	     
 
