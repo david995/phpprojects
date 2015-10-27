@@ -27,7 +27,7 @@
 		?>
 <div class="container">
   <div class="row">
-    <div class="col-sm-3"><img src='dices_img/dado_<?=$valor1?>.png'></div>
+    <div class="col-sm-2"><img src='dices_img/dado_<?=$valor1?>.png'></div>
     <div class="col-sm-4"><img src='dices_img/dado_<?=$valor2?>.png'></div>
     <div class="col-sm-4">
       <form action="resultado.php?valor1=$option" style="margin-top:50px; margin-left:30px; border:solid; padding:1em;" >
