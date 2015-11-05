@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	.color{background-color: grey;}
+	</style>
+	<script type="text/javascript">
+		
+		function calcletra(dni){
+			var JuegoCaracteres="TRWAGMYFPDXBNJZSQVHLCKET";
+			var Posicion= dni % 23;
+			var Letra = JuegoCaracteres.charAt(Posicion);
+			return Letra;
+		}
+
+
+
+		
+	</script>
+</head>
+<body>
+<center>
+<div style="margin:100px; background-color: grey; overflow: hidden; width: 200px; height: 50px;">
+	<form name="letradni" action="">
+		DNI:<br>
+		<input type="text" name="numdni" maxlenght="9" size="9">
+		<input type="text" name="letra" size="1" readonly>
+		<input type="button" value="Ok" onclick="document.letradni.letra.value=calcletra(document.letradni.numdni.value);">
+	</form> 
+
+</div>
+</center>
+</body>
+</html>

@@ -6,11 +6,19 @@ if(isset($_GET["valor1oculto"])){
     $operacion=$_GET["operacion"];
     $dado1=$_GET["dado1"];
     $dado2=$_GET["dado2"];
-    $resultado=$dado1+$dado2;
+    
+    
     if($dado1==$valor1oculto && $dado2==$valor2oculto){
-    print("Operación: ".$dado1." ".$operacion." ".$dado2." = ".$resultado);
+        if($operacion=="+"){
+            $resultado=$dado1+$dado2;
+            print("Operación: ".$dado1." ".$operacion." ".$dado2." = ".$resultado);
+        }else{
+            $resultado=$dado1-$dado2;
+            print("Operación: ".$dado1." ".$operacion." ".$dado2." = ".$resultado);
+        }
     }else{
-        print("Error: El valor introducido no es el mismo a los de los dados.");
+        
+        print("Error: El valor introducido no es el mismo al de los dados.");
     }
     
     

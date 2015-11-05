@@ -1,14 +1,5 @@
-<html>
-	<head>
-		<title>CODE 01</title>
+
 	
-	
-		
-	</head>
-	
-	<body>
-		<div class="container">
-  <div class="row">
 	  
 		<?php
 		
@@ -28,9 +19,9 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-2"><img src='dices_img/dado_<?=$valor1?>.png'></div>
-    <div class="col-sm-4"><img src='dices_img/dado_<?=$valor2?>.png'></div>
+    <div class="col-sm-5"><img src='dices_img/dado_<?=$valor2?>.png'></div>
     <div class="col-sm-4">
-      <form action="resultado.php?valor1=$option" style="margin-top:50px; margin-left:30px; border:solid; padding:1em;" >
+      <form action="resultado.php" >
         
         <label>
           OPERACIÓN DE LOS DADOS
@@ -48,13 +39,9 @@
         DADO 2: <input type="text" name="dado2"/>
         <br>
         <br>
-        <input type="submit" name="submit"/>
+        <input type="submit" name="submit" value="Calcular valores"/>
       </form>
     </div>
   </div>
 </div>
 
-		</div>
-	</div>
-	</body>
-</html>

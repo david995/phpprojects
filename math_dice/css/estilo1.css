@@ -1,1 +1,22 @@
-img .dado{margin-right: 2em;}
+#fondo{position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  repeat:no-repeat;
+}
+
+form{margin-top:50px;
+margin-left:30px;
+border:solid;
+padding:1em;
+overflow: hidden;
+background-color:#d18330;
+width: 400px;
+height: 250px;
+bborder-radius: 38px 38px 38px 38px;
+-moz-border-radius: 38px 38px 38px 38px;
+-webkit-border-radius: 38px 38px 38px 38px;
+border: 8px double #a1520d;
+}
