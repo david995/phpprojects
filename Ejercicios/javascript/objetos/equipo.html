@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title></title>
+
+</head>
+<body>
+	
+	<script type="text/javascript">
+
+		function Equipo(host,ip,CPU,RAM){
+			this.host=host;
+			this.ip=ip;
+			this.CPU=CPU;
+			this.RAM=RAM;
+
+			this.getHost=function(){
+				return this.host;
+			};
+			this.setHost=function(_host){
+				this.host=_host;
+			};
+			this.getIP=function(){
+				return this.ip;
+			};
+			this.setIP=function(_ip){
+				this.ip=_ip;
+			};
+			this.getCPU=function(){
+				return this.CPU;
+			};
+			this.setCPU=function(_CPU){
+				this.CPU=_CPU;
+			};
+			this.getRAM=function(){
+				return this.RAM;
+			};
+			this.setRAM=function(_RAM){
+				this.RAM=_RAM;
+			};
+			this.toString=function(){
+				var strequipo="HOST: "+this.host+"<br>IP: "+this.ip+"<br> CPU: "+this.CPU+"<br>RAM: "+this.RAM+"<br>";
+				return strequipo;
+			};
+		}
+
+			function Impresora(modelo,anchopapel,tipo,equipo){
+				this.modelo=modelo;
+				this.anchopapel=anchopapel;
+				this.tipo=tipo;
+				this.equipo=equipo;
+
+				this.getModelo=function(){
+					return this.modelo;
+				};
+				this.setModelo=function(_modelo){
+					this.modelo=_modelo;
+				};
+				this.getAnchopapel=function(){
+					return this.anchopapel;
+				};
+				this.setAnchopapel=function(_anchopapel){
+					this.anchopapel=_anchopapel;
+				};
+				this.getTipo=function(){
+					return this.tipo;
+				};
+				this.setTipo=function(_tipo){
+					this.tipo=_tipo;
+				};
+				this.getEquipo=function(){
+					return this.equipo;
+				};
+				this.setEquipo=function(_equipo){
+					this.equipo=_equipo;
+				};
+				this.toString=function(){
+					var strimpresora="MODELO: "+this.modelo+"<br>ANCHOPAPEL: "+this.anchopapel+"<br>TIPO: "+this.tipo+"<br>EQUIPO: "+this.equipo.toString();
+					return strimpresora;
+				};
+			}
+
+			var equipo1 = new Equipo("host1","192.168.1.1","I7-4500","8GB");
+			var equipo2 = new Equipo("host2","192.168.1.2","I5-3500","4GB");
+
+			var equipo3 = equipo1;
+
+			var impresora1 = new Impresora("modelo1","A4","tipo1",equipo1);
+			var impresora2 = new Impresora("modelo2","A4","tipo2",equipo2);
+
+			document.write(impresora1.toString());
+	</script>
+</body>
+</html>

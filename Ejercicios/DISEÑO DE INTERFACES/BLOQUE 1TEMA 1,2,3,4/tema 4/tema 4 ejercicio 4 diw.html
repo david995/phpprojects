@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	
+	<form method="post" action="recibirForm">
+		<fieldset>
+			<legend>Formulario</legend>
+			Nombre: <input type="text">
+			Apellidos: <input type="text">
+			DNI: <input type="text">
+	<br>
+			<input type="radio" id="hombre" name="genero">HOMBRE
+			<input type="radio" id="mujer" name="genero">MUJER
+	<br>
+			Nacido en:<input type="text">
+			<select id="estudios" name="estudios">
+				<option value="castellón" label="Castell&oacute;n"></option>
+				<option value="valencia" label="Val&eacute;ncia"></option>
+				<option selected="selected" value="Alicante" label="Alicante"></option>
+			</select> 
+			Fecha de nacimiento <input type="text">
+	<br>
+			<input type="submit" name="botonSubmit" id="boton2" value="Enviar"/>
+			<input type="reset" name="borrar" id="borrar" value="Borrar"/>
+
+		</fieldset>
+	</form>
+	
+</body>
+</html>

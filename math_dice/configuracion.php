@@ -1,7 +1,14 @@
 <!-- PHP  -->
-
       <?php
+      
+      
+      $lenguaje1=$_GET['lenguaje'];
+      if($lenguaje1==null){
 $lenguaje="es";
+}else{
+	$lenguaje=$lenguaje1;
+}
+$contador=0;
 
 $menu=array(
 	"titulo"=>array(
@@ -21,50 +28,65 @@ $menu=array(
 		"en"=>"Games",
 		"submenu"=>array(
 			"sub0"=>array(
-				"es"=>"Juego tradicional",
-				"en"=>"Traditional game",
+				"es"=>"Juego",
+				"en"=>"Game",
 			),
 			"sub1"=>array(
-				"es"=>"Juego para niños",
-				"en"=>"Game for kids",
+				"es"=>"Juego+",
+				"en"=>"Game+",
 				),
 			)
 		)
 	);
 	
-$titulo = $menu["titulo"][$lenguaje]; //TÍTULO
+
 
 ?>
-<img id="fondo" src="dices_img/fondo.jpg" alt="Fondo" />
 
           <!-- FINAL DEL MENÚ -->
           
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class='navbar-brand' href='#'><?=$titulo?></a> <!-- TÍTULO -->
+      <a class='navbar-brand' href='#'><?php echo $menu["titulo"][$lenguaje]?></a> <!-- TÍTULO -->
     </div>
     <div>
       <ul class="nav navbar-nav">
-         <li class='active'><a href='#'><?=$menu["inicio"][$lenguaje]?></a></li> <!-- INICIO -->
+         <li class='active'><a href='Juego.php'><?=$menu["inicio"][$lenguaje]?></a></li> <!-- INICIO -->
          <li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' href='#'><?=$menu["juegos"][$lenguaje]?><span class='caret'></span></a> <!-- INICIO DEL SUBMENÚ -->
           <ul class='dropdown-menu'>
             <?php
-            for ($i = 0; $i < count($menu["juegos"]["submenu"]); $i++) {
+            /*for ($i = 0; $i < count($menu["juegos"]["submenu"]); $i++) {
               echo "<li><a href='#'>".$menu["juegos"]["submenu"]["sub$i"][$lenguaje]."</a></li>"; // FOR PARA MOSTRAR EL SUBMENÚ
+            }*/
+            foreach($menu["juegos"]["submenu"] as $valor){
+            	echo "<li><a href='".$valor[$lenguaje].".php'>".$valor[$lenguaje]."</a></li>"; // FOREACH PARA MOSTRAR EL SUBMENÚ
             }
             ?>
           </ul>
         </li>
-        <li class='active'><a href='#'><?=$menu["info"][$lenguaje]?></a></li> <!-- INSTRUCCIONES -->
+        <li class='active'><a href='instrucciones.php'><?=$menu["info"][$lenguaje]?></a></li> <!-- INSTRUCCIONES -->
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="<?=$_SERVER['PHP_SELF']?>?lenguaje=es"><img style="width:35px; heigth:35px;" src="dices_img/banderaes.jpg" /></a></li>
+      <li><a href="<?=$_SERVER['PHP_SELF']?>?lenguaje=en"><img style="width:35px; heigth:35px;" src="dices_img/banderain.png" /></a></li>
+    </ul>
     </div>
   </div>
 </nav>
+<img id="fondo" src="dices_img/fondo.png.jpg"></img>
           <!-- FINAL DEL MENÚ -->
-<?php
- include "dices.php";
- ?>
-
-	     
-
+          <div style="float: right;">
+         
+		    <?php
+		        if(isset($jugador1)){
+		    ?>
+	           Jugador: <?=$jugador1->getNOMBRE()?> <br> Puntos: <?=$jugador1->getPUNTOS()?>
+	       <?php
+		        }else{
+	       ?>
+	           No hay jugadores definidos
+	       <?php
+		        }
+	       ?>
+		</div> 	</div> 

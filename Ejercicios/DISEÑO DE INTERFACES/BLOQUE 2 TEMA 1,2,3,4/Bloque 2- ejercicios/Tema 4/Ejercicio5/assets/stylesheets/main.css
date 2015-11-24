@@ -1,0 +1,384 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+  
+/*Añadir una regla CSS que aplique un estilo a
+todos los elementos de la página. El estilo será:
+el color de la fuente #888 y las propiedades de la
+fuente son: el tamaño de la fuente 16px y el 
+interlineado 22px, la familias de fuentes que sean
+ "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif*/
+
+
+  body {
+    color: #888;
+    font: 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+
+
+/*Hay que indicar específicamente que la clase grid 
+tiene que compartir la propiedad y los valores de width
+(para asegurarse de que nuestra página se mantiene fijo 
+a 960 píxeles de ancho) y la propiedad de margin y sus 
+valores (para centrar cualquier elemento con la clase 
+grid de la página).*/
+
+.container, .grid {
+      margin: 0 auto;
+      width: 960px;
+    }
+
+/*especificar las propiedades específicas de la clase 
+container que son un relleno en la parte izquierda 30px
+ y en la parte derecha 30px.*/
+
+.container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+/*Además, queremos poner un poco de espacio entre 
+cada una de las columnas para ayudar a romper el 
+contenido. Podemos lograr esto poniendo un relleno 
+horizontal en cada una de las columnas.*/
+
+
+  .grid,
+    .col-1-3,
+    .col-2-3 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+/*Queremos que los dos tipos de columnas se muestren 
+como elementos de bloque. Necesitaremos también que 
+su alineamiento vertical esté establecido esté 
+establecido como top. Para lograr esto hay que definir
+dos nuevos selectores que compartan las propiedades 
+display y vertical-alignment y sus correspondientes 
+valores.*/
+
+  .col-1-3,
+    .col-2-3  {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+/*Las clases col-1-3 y col-2-3 definen el ancho 
+de cada tipo de columna. La primera ocupará un tercio
+de ancho. La segunda clase ocupará dos tercios*/
+  
+   .col-1-3 {
+      width: 33.33%;
+    }
+
+    .col-2-3 {
+      width: 66.66%;
+    }
+
+/*
+  ========================================
+  Clearing float elements
+  ========================================
+*/
+            /* Ubica un elemento o clase donde deberia ir, asi no envuelve a lo que está flotando */
+.hero{
+  clear: both;
+}
+
+.container h3{
+  text-align: right;
+}
+  
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1, h2, h3, h4 {
+  color: #648880;
+}
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
+}
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 44px;
+}
+h3 {
+  font-size: 21px;
+}
+h4 {
+  font-size: 18px;
+}
+
+/*Los elementos h5, además tienen que estar
+en mayúsculas*/
+h5 {
+  color: #a9b2b9;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+strong {
+  font-weight: 400;
+}
+
+/*Los elementos cite y los elementos
+em deben estar en cursiva*/
+    cite, em {
+      font-style: italic;
+    }
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+/*Los enlaces deben tener un color
+#648880 y no deben aparecer subrayados*/
+  a {
+  color: #648880;
+  text-decoration: none;
+}
+
+
+/*Cuando nos situemos sobre un enlace,
+el color debe ser #a9b2b9*/
+    a:hover {
+    color: #a9b2b9;
+  }
+
+/*Los enlaces que están dentro de un 
+elemento p deben de tener un borde inferior
+de un grosor 1px, sólido y con el color #dfe2e5*/
+
+  p a {
+  border-bottom: 1px solid #dfe2e5;
+  }
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+}
+.btn-alt {
+  border: 1px solid #dfe2e5;
+  padding: 10px 30px;
+}
+
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+
+/*Los elementos de la clase logo deberían tener
+un borde superior sólido, de color #648880 y
+de un grosor de 4px. Además se tendrán que
+posicionar de manera adecuada. El relleno de estos
+elementos será de 40px en la parte superior y en 
+la inferior de 22px.
+  
+Además, con respecto al texto y a las fuentes,
+los elementos de esta clase deben tener
+un tamaño de fuente de 48px, un peso de 100, un
+espaciado entre letras de .5px, un interlineado
+de 44px y las letras deberán aparecer en mayúscula*/
+
+
+  .logo {
+    border-top: 4px solid #648880; 
+    float: left;
+    font-size: 48px; 
+    font-weight: 100; 
+    letter-spacing: .5px; 
+    line-height: 44px; 
+    padding: 40px 0 22px 0;   /* arriba, derecha, abajo, izquierda (agujas reloj)*/
+    text-transform: uppercase; 
+  }
+
+
+
+.tagline {
+  margin: 66px 0 22px 0;
+  text-align: right;
+}
+
+/*Los elementos de la clase primary-nav deben
+tener las siguientes características de fuente y texto:
+un tamaño de fuente de 14px, un peso de 400, un 
+espaciado entre las letras de .4px, y las letras
+deberán aparecer en mayúsculas*/
+
+   .primary-nav {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+   }
+
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
+
+/*Los elementos de la clase primary-footer deben
+tener un relleno inferior de 44px y un relleno
+superior de 44px*/
+
+.primary-footer {
+  padding-bottom: 44px;
+  padding-top: 44px;
+}
+
+/*Los elementos small dentro de elementos de la
+clase primary-footer deben modificar su posición
+para situarse como se muestra en la imagen final.
+Además, el peso de la fuente es de 400*/
+
+.primary-footer small {
+  float: left;
+  font-weight: 400;
+}
+
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+/*Los elementos de la clase nav estarán 
+alineados a la derecha*/
+
+  nav a{
+    float: right;
+    margin-right: 2px;
+  }
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+/*Los elementos de la clase hero tienen un 
+interlineado de 44px, su texto está centrado, y 
+tienen un relleno de 22px y 66px en la parte 
+superior e inferior respectivamente. En los
+laterales derecho e izquierdo tienen un relleno
+de 80px*/
+
+  .hero {
+  line-height: 44px;
+  text-align: center;
+  padding: 22px 80px 66px 80px; 
+  
+  }
+
+/*Los encabezados que están dentro de un elemento
+de la clase hero deben tener un tamaño de letra
+de 36px*/
+
+  .hero h2 {
+    font-size: 36px;
+  }
+
+/*Los elementos p que están dentro de un elemento
+de la clase hero deben tener un tamaño de letra de
+24px y un peso de 100*/
+
+  .hero p {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+/*Los encabezados h3 que estén dentro de un enlace 
+que a su vez está dentro de un elemento
+de la clase teaser deben tener un color #a9b2b9
+cuando nos posicionemos sobre ellos*/
+  
+  .teaser a h3 {
+  color: #a9b2b9;
+  }
+
+

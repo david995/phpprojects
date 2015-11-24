@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+</head>
+<body>
+<img id="image_X" src="1.png">
+<script type="text/javascript">
+		setInterval(function(){ cambiaimagen() }, 5);
+		var contador=2;
+
+		var image_x = document.getElementById('image_X');
+		
+		function cambiaimagen(){
+			console.log(contador);
+				image_x.src=contador+".png";
+				contador++;
+				if(contador==11){contador=1;}
+			
+		}
+	</script>
+</body>
+</html>

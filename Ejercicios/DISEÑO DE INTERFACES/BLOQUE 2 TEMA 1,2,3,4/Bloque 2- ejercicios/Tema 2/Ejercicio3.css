@@ -1,0 +1,39 @@
+h1 {
+	color: white;
+	font-size: 11;
+
+}
+
+header a {
+	color: purple;
+	font-size: 22px;
+	
+}
+
+header {
+	background-color: grey;
+}
+
+h1, nav {
+	text-align: center;   /* No funciona centrar */ 
+}
+
+body {
+		background-color: #C0C0C0;
+}
+
+footer {
+	background-color: grey;
+}
+
+h2 {
+	color: grey;
+	background-color: #5BBDF2;
+
+}
+
+progress[value] {
+  width: 250px;
+  height: 10px;
+ background-color: green;
+}

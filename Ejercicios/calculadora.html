@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+       
+        <style type="text/css" media="all">
+            td {
+                    border:hidden;
+                }
+                table {
+                    border: 3px solid aqua;
+                    background-color:aqua;
+                }
+                .allwidth{width:98%;}
+                .blanco{background-color: white; width:20px; height: 9px; }
+        </style>
+    </head>
+    <body>
+        
+         <form name="fomulario">
+        
+            <table border="3">
+
+                <tr>
+                    <!--<th align="right" colspan="5"><input id="calculando" class="allwidth" type="text" name="inputtext"/></th>-->
+                    <th height="20" colspan="5"><div id="calculando" class="blanco"></div></th>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="escribir1_9('SQRT')" name="SQRT" value="SQRT"/></td>
+                    <td><input type="button" onclick="escribir1_9('EXP')" name="EXP" value="EXP"/></td>
+                    <td><input type="button" onclick="escribir1_9('LOG')" name="LOG" value="LOG"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="escribir1_9('SENO')" name="SENO" value="SENO"/></td>
+                    <td><input type="button" onclick="escribir1_9('COSENO')" name="COSENO" value="COSENO"/></td>
+                    <td><input type="button" onclick="escribir1_9('TAN')" name="TAN" value="TAN"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="escribir1_9('MC')" name="MC" value="MC"/></td>
+                    <td><input type="button" onclick="escribir1_9(7)" name="7" value="7"/></td>
+                    <td><input type="button" onclick="escribir1_9(8)" name="8" value="8"/></td>
+                    <td><input type="button" onclick="escribir1_9(9)" name="9" value="9"/></td>
+                    <td><input type="button" onclick="escribir1_9('+')" name="+" value="+"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="escribir1_9('MR')" name="MR" value="MR"/></td>
+                    <td><input type="button" onclick="escribir1_9(4)" name="4" value="4"/></button></td>
+                    <td><input type="button" onclick="escribir1_9(5)" name="5" value="5"/></button></td>
+                    <td><input type="button" onclick="escribir1_9(6)" name="6" value="6"/></button></td>
+                    <td><input type="button" onclick="escribir1_9('-')" name="-" value="-"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="escribir1_9('MS')" name="MS" value="MS"/></td>
+                    <td><input type="button" onclick="escribir1_9(this.value)" name="1" value="1"/></td>
+                    <td><input type="button" onclick="escribir1_9(2)" name="2" value="2"/></td>
+                    <td><input type="button" onclick="escribir1_9(3)" name="3" value="3"/></td>
+                    <td><input type="button" onclick="escribir1_9('*')" name="*" value="*"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="escribir1_9('=')" name="=" value="="/></td>
+                    <td><input type="button" onclick="escribir1_9(0)" name="0" value="0"/></td>
+                    <td><input type="button" onclick="escribir1_9('.')" name="." value="."/></td>
+                    <td><input type="button" onclick="escribir1_9('CLEAR')" name="CLEAR" value="CLEAR"/></td>
+                    <td><input type="button" onclick="escribir1_9('/')" name="/" value="/" /></td>
+                </tr>
+            </table>
+        </form>
+        
+        <script type="text/javascript">
+        var decimal="22.2"
+        console.log(decimal);
+        console.log(Number(decimal));
+            var cajadiv=document.getElementById("calculando");
+            var cajadiv1=document.getElementById("calc");
+            var suma="";
+            var contador=0;
+            var cont1=0;
+            var cont2=1;
+            var vector1= new Array();
+            var vector2= new Array();
+            var resultado="";
+            var ms="";
+            function escribir1_9(numero){
+                
+                switch(numero){
+                    case 1:  case 2:  case 3:  case 4: case 5: case 6:  case 7: case 8:  case 9:  case 0:
+                          suma=suma+numero; cajadiv.innerHTML = suma; break;
+                    case '+': case '-': case '*': 
+                    case '/': vector1.push(Number(suma)); suma=""; cajadiv.innerHTML = numero; vector2.push(numero); if(contador!==0){contador++;} break;
+                    case '.': suma=suma+numero; cajadiv.innerHTML = suma; break;
+                    case '=':
+
+                    vector1.push(Number(suma)); 
+                    console.log(contador);
+                    console.log(vector2);
+                    switch(vector2[contador]){
+                        case '+':resultado=vector1[cont1]+vector1[cont2]; break;
+                        case '-':resultado=vector1[cont1]-vector1[cont2]; console.log("Resta: "+resultado); break;
+                        case '*':resultado=vector1[cont1]*vector1[cont2]; cont1+2; cont2+2; break;
+                        case '/':resultado=vector1[cont1]/vector1[cont2]; cont1+2; cont2+2; break;
+                    }
+                     cajadiv.innerHTML = resultado;
+                    
+                    break;
+                    case 'SQRT':vector1.push(Number(suma)); resultado=Math.sqrt(vector1[0]); cajadiv.innerHTML = resultado; break;
+                    case 'EXP':vector1.push(Number(suma)); resultado=Math.exp(Number(vector1[0])); cajadiv.innerHTML = resultado; break;
+                    case 'LOG':vector1.push(Number(suma)); resultado=Math.log(Number(vector1[0])); cajadiv.innerHTML = resultado; break;
+                    case 'SENO':vector1.push(Number(suma)); resultado=Math.sin(vector1[0]); cajadiv.innerHTML = resultado; break;
+                    case 'COSENO':vector1.push(Number(suma)); resultado=Math.cos(vector1[0]); cajadiv.innerHTML = resultado; break;
+                    case 'TAN': vector1.push(Number(suma));console.log(vector1[0]); resultado=Math.tan(vector1[0]); cajadiv.innerHTML = resultado; break;
+                    case 'MS': vector1.push(Number(suma)); if(resultado===""){ms=vector1[0];} break;
+                    case 'MR': cajadiv.innerHTML = ms; break;
+                    
+                    case 'CLEAR':case 'MC':
+                    contador=0;
+                    cont1=0;
+                    cont2=1;
+                    vector1.splice(0,vector1.length);
+                    vector2.splice(0,vector2.length);
+                    cajadiv.innerHTML = "";
+                    suma="";
+                    console.table(vector1);
+                    resultado="";
+                    break;
+                    
+                    cajadiv.innerHTML = resultado;
+                      
+                }
+
+                
+                
+            }
+        </script>
+    </body>
+</html>

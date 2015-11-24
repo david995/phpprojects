@@ -1,0 +1,3 @@
+*, h2, h1, p, .especial, #intro, #intro strong, h2 + p {
+	color: red;
+}

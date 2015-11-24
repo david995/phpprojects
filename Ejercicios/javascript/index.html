@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Tipos de datos </title>
+	<meta charset="utf-8">
+	<script type="text/javascript"> // para referirnos a otra página en el que pondremos solo javascript se usa <script type="text/javascript" src="script.js">
+		
+		//alert("Hola mundo!!"); // salta una ventana con un mensaje
+		//console.log("hola"); // en la consola sale el valor de la variable o lo que haya entre paréntesis
+
+		//TIPOS DE DATOS
+		var variable1=3;
+		document.write(typeof variable1);
+		
+		variable1 = 4.86;
+		document.write("<br>");
+		document.write(typeof variable1);
+		
+		variable1= true;
+		document.write("<br>");
+		document.write(typeof variable1);
+		
+		variable1= "hola";
+		document.write("<br>");
+		document.write(typeof variable1);
+		
+		var variable2;
+		document.write("<br>");
+		document.write(typeof variable2);
+
+		variable2= new String("Hola!!");
+		document.write("<br>");
+		document.write(typeof variable2);
+
+		variable2=null;
+		document.write("<br>");
+		document.write(typeof variable2);
+
+		//CAMBIAR ELEMENTOS DE LA PÁGINA
+
+		//document.bgColor="red"; //cambia el color del fondo de la página
+
+		document.write("<br>");
+		document.write("<br>");
+
+		var v1 = 30;
+		var v2 = v1+10;
+		//var v3 = prompt("Dime un número"); //prompt pide algo por pantalla pero coloca un string en la variable
+		//var v4 = v1+v2+parseInt(v3);
+		//document.write("<br>");
+		//document.write(v4);
+		
+		//var dividendo=prompt("Introduzca el dividendo");
+		//var divisor=prompt("Introduzca el divisor");
+		var resultado;
+		//divisor!=0 ? ( (resultado=dividendo/divisor) && (alert(resultado))) : alert("No se puede entre 0")
+		
+		//javascript puede comparar diferentes tipos de datos
+
+		/*var v5 = parseInt(prompt("Dime tu edad"));
+		if (v5===18) { //el tripe === hace una igualdad estricta donde no solo se ve si el número es igual si no el tipo también
+			alert("Tienes 18") }else{
+				alert("No tienes 18")};
+		*/
+
+		/*
+		var v6 = parseInt(prompt("Introduce un número"));
+		if (v6>6) { 
+			alert("Incorrecto") }
+			else{ if (v6==0) {
+					alert("Domingo");
+				} else{if (v6==1) {
+						alert("Lunes");
+					} else{ if (v6==2) {
+							alert("Martes");
+						}else{if (v6==3) {
+								alert("Miércoles");
+							}else{if (v6==4) {
+									alert("Jueves");
+								}else{if (v6==5) {
+										alert("Viernes");
+									}else{if (v6==6) {
+											alert("Sábado");
+											}												
+										}
+									}
+								}
+							}
+						}
+					}
+				};
+		*/
+
+		var variable = "6.95";
+		document.write(parseInt(variable));
+		document.write("<br>");
+		var variable = "abcd";
+		document.write(parseInt(variable));
+		document.write("<br>");
+		document.write(parseInt("101011",2));
+		document.write("<br>");
+		document.write(parseInt("101011asdfasfaasdf"));
+		document.write("<br>");
+		document.write(Math.ceil(-6));
+
+
+		/* var password="";
+		while(password!="daw"){
+			password = prompt("Introduce la password");
+		}
+
+		alert("contraseña correcta");
+*/
+	document.write("<br>");
+/*
+do{
+	var resultado1;
+	var op1 = parseInt(prompt("Introduce un número"));
+	var operador = parseInt(prompt("Introduce un operador 1=+ 2=- 3=* 4=/"));
+	var op2 = parseInt(prompt("Introduce el segundo número"));
+	
+	switch(operador){
+		case 1: 
+			resultado1=op1+op2;
+		break;
+		case 2: 
+			resultado1=op1-op2;	
+		break;
+		case 3: 	
+			resultado1=op1*op2;
+		break;
+		case 4:  
+			resultado1=op1/op2;
+		break;
+	}
+	document.write(resultado1);
+	document.write("<br>");
+	var pregunta = prompt("Desea volver a hacer una operación?")
+	}while(pregunta =="si");
+	
+*/
+
+var i=8;
+var j=3;
+
+document.write(i++); // primero hace la función (mostrar la variable) y luego hace la operación de dentro i++
+
+document.write("<br>");
+
+document.write(++i); //primero hace  la operación de dentro i++ y luego hace la función (mostrar la variable) 
+
+document.write("<br>");
+
+document.write(--i);
+
+document.write("<br>");
+
+document.write(i--);
+
+document.write("<br>");
+
+document.write(j++ + i);
+
+document.write("<br>");
+
+document.write(--j + ++i);
+
+document.write("<br>");
+
+//---------------------------ARRAYS---------------------------------------------------------------------------------------------------------------------------
+
+var a=['a',6,'c'];
+var b=[];
+
+for (var i = 0; i < a.length; i++) {
+	b[i] = a[i]
+	document.write(b[i])
+	document.write("<br>");
+};
+
+
+var c=['a','b','d'];
+var d=['a','b','d'];
+
+
+for (var e = 0; e < c.length; e++) {
+
+
+	if (c[e] != d[e]) {
+		
+		document.write("Los vectores c y d no son iguales");
+		break;
+	}
+
+	document.write()
+
+	if (c[e] == d[e]) {
+		if(e==(c.length-1)){
+			document.write("Los vectores c y d son iguales")
+		}
+	}
+
+	}
+
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+/*	
+	var base = parseInt(prompt("Introduzca la base"));
+	var exponente = parseInt(prompt("Introduzca el exponente"));
+	var res=base;
+
+	
+	
+		if(exponente==0){
+
+			res=1;
+		}else{
+
+			for (var i = 0; i < exponente; i++) {
+				res=base*res;						// esto es igual a "res*=base;"
+				
+			}	
+		}
+document.write(res);
+	*/
+
+
+/*
+
+try{
+	var num = Number(prompt("Introduzca un numero para sacar su factorial"));
+
+function factorial(num){
+
+
+		var resf=1;
+
+				for (var i = 2; i <= num; i++) {
+					resf*=i;						
+				}	
+
+			return resf;
+	}	
+	var resf1=factorial(num);
+	document.write(resf1);
+}catch(ex)){
+	alert(ex);
+}
+	*/
+/*
+var num1 = Number(prompt("Introduzca un numero"));
+var result;
+var primo=true;
+
+		for (var i = 2; i < num1; i++) {
+					result=num1%i;
+					console.log(result);
+
+				while(primo){
+					if(num1%i==0){
+				primo=false;
+				
+			}
+				}
+			
+		}
+
+		if(primo==true){
+				document.write("Es primo");
+			}else{
+				document.write("No es primo")
+			}
+*/
+
+//pedir un número (por ejemplo 3)
+//1
+//12
+//123
+
+/*var num2 = Number(prompt("Introduzca un numero"));
+
+
+for (var i = 1; i <= num2; i++) {
+	for (var e = 1; e <= i; e++) {
+		
+		document.write(e);
+		
+
+	}
+	document.write("<br>")
+}
+*/
+
+var juego = prompt("Introduce piedra, papel o tijera");
+var numero12= Math.random();
+
+if(numero12<0.33){
+	alert("maquina -- piedra"+"    tu -- "+juego);
+	if(juego==="piedra"){
+		alert("empate");
+	}
+	if(juego==="papel"){
+		alert("has ganado");
+	}
+	if(juego==="tijera"){
+		alert("has perdido");
+	}
+}
+ if(numero12>0.33 && numero12<0.66){
+	alert("maquina -- tijera"+"    tu -- "+juego); 
+	if(juego==="tijera"){
+		alert("empate");
+	}
+	if(juego==="piedra"){
+		alert("has ganado");
+	}
+	if(juego==="papel"){
+		alert("has perdido");
+	}
+
+ }
+ if(numero12>0.66){
+	alert("maquina -- papel"+"    tu -- "+juego); 
+	if(juego==="papel"){
+		alert("empate");
+	}
+	if(juego==="tijera"){
+		alert("has ganado");
+	}
+	if(juego==="piedra"){
+		alert("has perdido");
+	}
+
+ }
+
+
+
+
+function miFuncion(){
+	document.body.style.background="blue";
+}
+
+	</script>
+</head>
+<body>
+	<button onclick="Juego()">Clica aqui
+</body>
+</html>

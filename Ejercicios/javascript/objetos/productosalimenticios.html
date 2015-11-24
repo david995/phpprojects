@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		function Producto(codigo,nombre,precio){
+			this.codigo=codigo;
+			this.nombre=nombre;
+			this.precio=precio;
+
+			this.getNombre=function(){
+				return this.nombre;
+			};
+			this.setNombre=function(_nombre){
+				this.nombre=_nombre;
+			};
+			this.getCodigo=function(){
+				return this.codigo;
+			};
+			this.setCodigo=function(_codigo){
+				this.codigo=_codigo;
+			};
+			this.getPrecio=function(){
+				return this.precio;
+			};
+			this.setPrecio=function(_precio){
+				this.precio=_precio;
+			};
+			this.ImprimirDatos=ImprimirDatos;
+
+		}
+		function ImprimirDatos(){
+			document.write("Código: "+this.codigo+"<br>"+"Nombre: "+this.nombre+"<br>"+"Precio: "+this.precio);
+		};
+
+		var producto1= new Producto(1,"Agua",0.40);
+		var producto2= new Producto(2,"Chocolate",2.5);
+		var producto3= new Producto(3,"Pan",1);
+
+		var vproducto = new Array();
+
+		vproducto.push(producto1);
+		vproducto.push(producto2);
+		vproducto.push(producto3);
+
+
+		document.write("<center><div style='border:solid 3px; width:300px;'>")
+		document.write("<h2><u>Productos alimenticios</u></h2>")
+
+		for (var i = 0; i < vproducto.length; i++) {
+			vproducto[i].ImprimirDatos();
+			document.write("<br>")
+			if (i!=(vproducto.length)-1) {document.write("###################<br>");};
+			
+		};
+
+		document.write("<br></div></center>")
+	</script>
+</head>
+<body>
+
+</body>
+</html>

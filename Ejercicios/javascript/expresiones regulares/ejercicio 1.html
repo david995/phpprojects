@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		var matricula = prompt("Introduce una matricula siguiendo este formato A 1111 ABC");
+
+		var expMAT = new RegExp("^[A-Z]{1-2}[' ']{1}[0-9]{4}[' ']{1}[A-C]{3}$","");
+		
+console.log(matricula);
+		if(expMAT.test(matricula)){
+			alert("Tu matricula esta en el formato correcto");
+		}else{
+			alert("Tu matricula es erronea");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

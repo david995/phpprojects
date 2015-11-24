@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title></title>
+
+</head>
+<body>
+	
+	<center>
+		<form name="formulario" style="border:solid 2px; width:250px; height:70px;">
+		<br>
+			<input type="text" name="texto">
+			<br>
+			<input type="button" name="enviar" value="Enviar" onclick="validarweb()">
+		</form>
+	</center>
+	<script type="text/javascript">
+		function validarnombre(){
+			var contenido=document.forms.formulario.texto.value;
+		
+			if(contenido.length>=3 && contenido.length <=15){
+				alert("La cadena es correcta");
+			}else{
+				alert("La cadena es incorrecta");
+			}
+		}
+
+		function validardni(){
+			var contenido=document.forms.formulario.texto.value;
+			var exRegular= new RegExp("^[0-6]{1}[0-9]{1}.[0-9]{3}.[0-9]{3}-[A-Z]{1}$");
+			if(exRegular.test(contenido)){
+				alert("El dni es correcto");
+			}else{
+				alert("El dni es incorrecto");
+			}
+		}
+	
+		function validarweb(){
+			var contenido=document.forms.formulario.texto.value;
+			var exRegular= new RegExp("^(https|http|ftp)://www.[a-zA-z]{3,20}.[a-z]{2,4}$");
+			if(exRegular.test(contenido)){
+				alert("La dirección es correcta");
+			}else{
+				alert("La dirección es incorrecta");
+			}
+		}
+	</script>
+</body>
+</html>

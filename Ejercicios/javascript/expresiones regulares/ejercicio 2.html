@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		.bien{background-color: green;}
+		.mal{background-color: red;}
+	</style>
+	<script type="text/javascript">
+		var cp = prompt("Introduce el codigo postal");
+
+		var expCP = new RegExp("^[0-9]{5}$");
+		
+
+		if(expCP.test(cp)){
+			document.write("<h5 class='bien'> Esta bien </h5>");
+		}else{
+			document.write("<h5 class='mal'> Esta mal </h5>");
+		}
+
+		var telefono = prompt("Introduce el telefono en formato (+34)XXXXXXXXX");
+
+		var expTEL = new RegExp("^['(+']{2}[0-9]{2}[')']{1}[0-9]{9}$");
+		
+
+		if(expTEL.test(telefono)){
+			document.write("<h5 class='bien'> Esta bien </h5>");
+		}else{
+			document.write("<h5 class='mal'> Esta mal </h5>");
+		}
+
+		var fecha = prompt("Introduce la fecha 'XX/XX/XXXX' ");
+
+		var expFECHA = new RegExp("^[0-9]{2}['/']{1}[0-9]{2}['/']{1}[0-9]{4}$");
+		
+
+		if(expFECHA.test(fecha)){
+			document.write("<h5 class='bien'> Esta bien </h5>");
+		}else{
+			document.write("<h5 class='mal'> Esta mal </h5>");
+		}
+
+		var correo = prompt("Introduce el correo electrónico (sin numeros)");
+
+		var expCORREO = new RegExp("^[a-zA-z]{3,20}@[a-z]{5,20}.(com|es)$");
+		
+
+		if(expCORREO.test(correo)){
+			document.write("<h5 class='bien'> Esta bien </h5>");
+		}else{
+			document.write("<h5 class='mal'> Esta mal </h5>");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

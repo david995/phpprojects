@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title></title>
+
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var miObjeto={
+			nombre:"Pepe",
+			edad:30,
+			empleo:"Programador java",
+		getNombre:function(){
+			alert("El nombre es: "+miObjeto.nombre);
+		},
+		getEdad:function(){
+			alert("La edad es: "+miObjeto.edad);
+		},
+		setEdad:function(numero){
+			miObjeto.edad=numero;
+		},
+		setNombre:function(_nombre){
+			miObjeto.nombre=_nombre;
+		},
+		getEmpleo:function(){
+			alert("El empleo es: "+miObjeto.empleo);
+		},
+		setEmpleo:function(_empleo){
+			miObjeto.empleo=_empleo;
+		},
+		toString:function(){
+			alert("El nombre es "+miObjeto.nombre+", la edad es "+miObjeto.edad+", el empleo es "+miObjeto.empleo);
+		}
+		};
+		/*
+		console.log(miObjeto.edad);
+		console.log(miObjeto["edad"]);
+		miObjeto.setEdad(40);
+		miObjeto.getEdad();
+		miObjeto.getNombre();
+		miObjeto.setNombre("David");
+		miObjeto.getNombre();
+		miObjeto.getEmpleo();
+		miObjeto.setEmpleo("Programador Javascript");
+		miObjeto.getEmpleo();
+		miObjeto.toString();
+*/
+		var miObjeto2={
+			nombre:"Pepe",
+			edad:48,
+			moto:{
+				modelo:"Suzuki",
+				año:1984
+			},
+			getMoto:function(){
+				alert("Los datos de la moto son, nombre: "+miObjeto2.moto.modelo+" y año: "+miObjeto2.moto.año)
+			}
+
+		};
+		
+		//miObjeto2.getMoto();
+		var miObjeto3=Object.create(miObjeto2);
+		//miObjeto3.getMoto();
+		miObjeto3.edad=90;
+		console.log(miObjeto2.edad);
+
+		miObjeto2.getEdad=function(){
+			alert(this.edad);
+		}
+		miObjeto3.getEdad();
+
+		function Persona(nombre,edad,dni){
+			this.nombre=nombre;
+			this.edad=edad;
+			this.dni=dni;
+
+			this.getNombre=function(){
+				return this.nombre;
+			};
+			this.setNombre=function(_nombre){
+				this.nombre=_nombre;
+			};
+			this.getEdad=function(){
+				return this.edad;
+			};
+			this.setEdad=function(_edad){
+				this.edad=_edad;
+			};
+			this.getDNI=function(){
+				return this.dni;
+			};
+		}
+		var persona=new Persona("Pepe",45,"12345678-C");
+		alert(persona.getNombre());
+		persona.setNombre("David");
+		alert(persona.getNombre());
+
+		var persona1=new Persona("P1",70,"26750078-C");
+		alert(persona1.getEdad());
+		persona1.setEdad(20);
+		alert(persona1.getEdad());
+
+		Persona.prototype.setDNI=function(_dni){
+			this.dni=_dni;
+		}
+
+
+		function Producto(codigo,nombre,precio){
+			this.codigo=codigo;
+			this.nombre=nombre;
+			this.precio=precio;
+
+			this.getNombre=function(){
+				return this.nombre;
+			};
+			this.setNombre=function(_nombre){
+				this.nombre=_nombre;
+			};
+			this.getCodigo=function(){
+				return this.codigo;
+			};
+			this.setCodigo=function(_codigo){
+				this.codigo=_codigo;
+			};
+			this.getPrecio=function(){
+				return this.precio;
+			};
+			this.setPreio=function(_precio){
+				this.precio=_precio;
+			};
+
+			this.ImprimirDatos=function(){
+				document.write("Código: "+codigo+"<br>"+"Nombre: "+nombre+"<br>"+"Precio: "+precio);
+			}
+		}
+		var producto1= new Producto(1,"Agua",0.40);
+		var producto2= new Producto(2,"Chocolate",2.5);
+		var producto3= new Producto(3,"Pan",1);
+		var vectorproducto = new Array();
+		vectorproducto.push(producto1);
+		vectorproducto.push(producto2);
+		vectorproducto.push(producto3);
+
+		document.write("<h2>Productos alimenticios</h2>")
+		for (var i = 0; i < vectorproducto.length; i++) {
+			vectorproducto[i].ImprimirDatos();
+			document.write(###################);
+		};
+
+	</script>
+</body>
+</html>

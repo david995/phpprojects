@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title></title>
+
+</head>
+<body>
+	<script type="text/javascript">
+	
+	function Edificio(calledeledificio,numero,codigopostal){
+		this.calledeledificio=calledeledificio;
+		this.numero=numero;
+		this.codigopostal=codigopostal;
+
+		var plantas=new Array();
+		for (var i = 0; i < plantas.length; i++) {
+			plantas[i]=new Array();
+		};
+		var propietario=new Array(plantas.length+1);
+			
+		for (var i = 1; i < propietario.length; i++) {
+			propietario[i]=new Array();
+		};
+		
+		this.agregarPlantasyPuertas=function(_numplantas,_puertas){
+			
+			for (var i = 1; i <= _numplantas; i++) {
+				for (var j = 1; j <= _puertas; j++) {
+
+					plantas[i][j]=_puertas;
+					
+					
+				};
+			};
+		}
+
+		this.modificarNumero=function(nuevoNumero){
+			this.numero=nuevoNumero;
+		}
+		this.modificarCalle=function(nuevaCalle){
+			this.calledeledificio=nuevaCalle;
+		}
+		this.modificarCodigoPostal=function(nuevoCP){
+			this.codigopostal=nuevoCP;
+		}
+		this.mostrarCalle=function(){
+			stringcalle="La calle de este edificio es"+this.calledeledificio+"<br>";
+			return stringcalle;
+		}
+		this.mostrarNumero=function(){
+			stringnumero="El número de este edificio es"+this.numero+"<br>";
+			return stringnumero;
+		}
+		this.mostrarCP=function(){
+			stringcodigopostal="El código postal de este edificio es"+this.codigopostal+"<br>"
+		}
+		this.agregarPropietario=function(_nombre,planta,puerta){
+			
+			
+			for (var i = 0; i <= planta; i++) {
+				for (var j = 0; j <= puerta; j++) {
+					propietario[i][j]=0;
+				};
+			};
+
+			propietario[planta][puerta]=_nombre;
+			console.table(propietario);
+			
+		}
+		this.mostrarPropietario=function(planta,puerta){
+			strpropietario=propietario[planta][puerta];
+			return strpropietario;
+		}
+		this.mostrarPlantas=function(){
+			mostrplantas=(plantas.length)-1;
+			return mostrplantas;
+		}
+		document.write("Nuevo	Edificio	construido	en	calle: "	+this.calledeledificio+",	nº:	"+this.numero+",	CP:	"+this.codigopostal+"<br>");
+
+		console.table(plantas);
+	}
+	
+	var e1= new Edificio("calle1",11,11111);
+	var e2= new Edificio("calle2",22,22222);
+
+	e1.agregarPlantasyPuertas(4,2);
+	e2.agregarPlantasyPuertas(8,5);
+
+	document.write(e1.mostrarPlantas());
+	document.write("<br>");
+	e1.agregarPropietario("Pepe",1,2);
+	document.write(e1.mostrarPropietario(1,2));
+	document.write("<br>");
+	e1.modificarCalle("callefalsa123")
+	document.write(e1.mostrarCalle());
+
+	</script>
+</body>
+
+</html>

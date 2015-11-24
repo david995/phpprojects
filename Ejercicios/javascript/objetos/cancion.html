@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title></title>
+
+</head>
+<body>
+	<center>
+	
+	<script type="text/javascript">
+		/*var cancion={
+			artista:"Pepe",
+			tema: "Pepe and friends",
+			anyo: 2013,
+			getInfo: function(){
+				return this.artista + " "+ this.anyo+ " "+this.tema;
+			}
+		}
+
+		function Prenda(ntipo,tejido,color){
+			this.tipo=ntipo;
+			this.tejido=tejido;
+			this.color=color;
+
+			this.getTipo=function(){
+				return this.tipo;
+			};
+			this.setTipo=function(tipo){
+				this.tipo=tipo;
+			};
+			this.getTejido=function(){
+				return this.tejido;
+			};
+			this.setTejido=function(tejido){
+				this.tejido=tejido;
+			};
+			this.getColor=function(){
+				return this.color;
+			};
+			this.setColor=function(color){
+				this.color=color;
+			};
+		}
+
+		var p1 = new Prenda("Falda","Lana","Azul");
+		var p2 = new Prenda("Jersey","Lana","Rosa");
+		var p3 = new Prenda("Pantalon","Tejano","Gris");
+		*//*
+		var prenda4=Object.getOwnPropertyNames(c1);
+		console.log(c1);
+		console.log(Object.keys(c1));
+
+		function Coche2(color,marca){
+			fi
+		}
+		Coche.prototype()
+		Coche2.prototype.mostrarColor=function(){
+			alert("HOOLAA");
+		}
+		for(var prop in c2 ){
+  			console.log(prop +" "+ " = " +c2[prop]);
+
+  			if(typeof Coche2.initialized == "undefined"){
+  				Coche2.prototype.mostrarColor=function(){
+  					alert(this.color);
+  				}
+  			}
+		}
+*/
+		//HERENCIA
+
+		function ClaseA(color){
+			this.color=color;
+			this.mostrarColor=function(){
+				alert("Color: "+this.color);
+			}
+		}
+		function ClaseB(color,modelo){
+			this.metodo=ClaseA; //metodo se puede llamar como se quiera
+			this.metodo(color);
+			delete this.metodo;
+
+			this.modelo=modelo;
+			this.mostrarModelo=function(){
+				alert("Modelo: "+ this.modelo);
+			};
+		}
+			var c1=new ClaseB("blanco","Focus");
+			//c1.mostrarColor();
+			//c1.mostrarModelo();
+		
+		function ClaseC(anyo){
+                    this.anyoFabricacion=anyo;
+                    this.mostrarAnyo=function(){alert("Año: " +this.anyoFabricacion)}
+        }
+        function ClaseD(marca,color,modelo,anyo){
+        	this.punteroB=ClaseB; //metodo se puede llamar como se quiera
+			this.punteroB(color,modelo);
+			delete this.metodo;
+			this.punteroC=ClaseC; //metodo se puede llamar como se quiera
+			this.punteroC(anyo);
+			delete this.metodo;
+			this.marca=marca;
+			this.mostrarMarca=function(){alert("Marca: " +this.marca)}
+	    }
+
+	    var prueba1=new ClaseD("marca1","Azul","modelo1",1995);
+	    prueba1.mostrarMarca();
+	    prueba1.mostrarColor();
+	    prueba1.mostrarModelo();
+	    prueba1.mostrarAnyo();
+
+	</script>
+	</center>
+</body>
+</html>

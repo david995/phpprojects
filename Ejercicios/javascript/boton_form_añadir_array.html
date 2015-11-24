@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+	
+	</script>
+
+</head>
+<body>
+	<form name="formulario"> 
+		 
+		<input type="text" name="palabra" > 
+		<input type="button" value="OK" onclick="añadir()">
+	</form>
+	<br>
+	<div id="contenidoarray">
+		
+	</div>
+	<script type="text/javascript">
+
+		var cajadiv=document.getElementById("contenidoarray");
+		var vector1=new Array();
+			
+		function añadir (){ 
+			palabra = formulario.palabra.value;
+			vector1.push(palabra);
+			
+			var encontrado=true;
+			for (var i = 0; i < vector1.length && encontrado==true; i++) {
+				if(palabra==vector1[i]&&encontrado==true){
+					encontrado=true;
+					vector1.pop();	
+				}else{
+					encontrado=false;
+				}
+			}
+			if(encontrado==false){
+				vector1.push(palabra); 
+				console.log(vector1);
+				cajadiv.innerHTML=vector1;
+			}
+			
+		}
+
+	
+	</script>
+	
+</body>
+</html>

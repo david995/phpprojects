@@ -1,0 +1,63 @@
+http://codepen.io/pen/?editors=001#
+http://codepen.io/anon/pen/MarqWy?editors=001
+
+
+/*function doble(a){
+  return a*2;
+}
+if(doble(2)!=4){
+  document.write("ERROR");
+}
+if(doble(2)==4){
+  document.write("Esta bien");
+}
+if(doble(0)!=0){
+  document.write("ERROR");
+}
+*/
+//------------------------------------------------------------
+// Pruebas
+//------------------------------------------------------------
+// http://jasmine.github.io/2.3/introduction.html
+
+describe('pruebas de la función encontrar3a', function() {
+
+  it('Si tiene 3 a', function() {
+    expect(encontrar3a("asdlasflkjaf")).toBe(true);
+    expect(encontrar3a("ddddddffffff")).toBe(false);
+  
+    
+  });
+ it('Si es una cadena vacía', function() {
+    expect(encontrar3a("")).toBe(false);
+  
+  });
+  
+  it('Si tiene 3 a de las cuales alguna es mayúscula', function() {
+    expect(encontrar3a("Asdkfjsadfsia")).toBe(true);
+    expect(encontrar3a("AAAkfjsdfsi")).toBe(true);
+  
+  });
+})
+
+//------------------------------------------------------------
+// Implementación
+//------------------------------------------------------------
+
+ 
+ 
+function encontrar3a(cadena){
+  var prueba=false;
+    var contador=0;
+  
+ /* document.write("len:"+cadena.length+"\n");*/
+  for(var i = 0; i < cadena.length ; i++){
+   /* document.write("char:"+cadena.charAt(i)+"\n");*/
+    if(cadena.charAt(i)=="a" || cadena.charAt(i)=="A"){
+      contador++;
+    }
+  }
+  /*document.write(contador+"\n");*/
+  if(contador==3) return prueba=true;
+  return prueba;
+}

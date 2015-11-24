@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title></title>
+
+</head>
+<body>
+	<center>
+	
+	<script type="text/javascript">
+		function Coche(marca,modelo,anodefabricacion){
+			this.marca=marca;
+			this.modelo=modelo;
+			this.anodefabricacion=anodefabricacion;
+
+			this.getMarca=function(){
+				return this.marca;
+			};
+			this.setMarca=function(_marca){
+				this.marca=_marca;
+			};
+			this.getModelo=function(){
+				return this.modelo;
+			};
+			this.setModelo=function(_modelo){
+				this.modelo=_modelo;
+			};
+			this.getAnodefabricacion=function(){
+				return this.anodefabricacion;
+			};
+			this.setAnodefabricacion=function(_anodefabricacion){
+				this.anodefabricacion=anodefabricacion;
+			};
+		}
+
+		var c1 = new Coche("marca1","modelo1",1991);
+		var c2 = new Coche("marca2","modelo2",1992);
+		var c3 = new Coche("marca3","modelo3",1993);
+		var coche = new Array();
+		coche.push(c1);
+		coche.push(c2);
+		coche.push(c3);
+		document.write("<table border='2' style='margin-top:20px;'>");
+			document.write("<tr>");
+				document.write("<th>MARCA</th>");
+				document.write("<th>MODELO</th>");
+				document.write("<th>AÑO DE FABRICACIÓN</th>");
+			document.write("</tr>");
+			for (var i = 0; i < coche.length; i++) {
+				document.write("<tr>");
+					document.write("<td>"+coche[i].getMarca()+"</td>");
+					document.write("<td>"+coche[i].getModelo()+"</td>");
+					document.write("<td>"+coche[i].getAnodefabricacion()+"</td>");
+				document.write("</tr>");
+			};
+		document.write("</table>");
+	</script>
+	</center>
+</body>
+</html>

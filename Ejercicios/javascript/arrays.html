@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var vector1=["elemento",4,false,undefined];
+
+		console.log(typeof vector1[0]);
+
+		console.time("vectorLiteral");
+			var vector2=new Array("elemento1","elemento2","elemento3","elemento4");
+		console.timeEnd("vectorLiteral");
+
+		var vector4=new Array(3);
+		
+
+		for (var i = 0; i < vector2.length; i++) {
+			document.write(vector2[i]+"<br>");
+
+		};
+
+		//matrices
+		document.write();
+		for (var i = 0; i < vector4.length; i++) {
+			vector4[i]=new Array(3);
+		};
+
+		var vector5=new Array(2);
+		vector5[0]=[1,8,2];
+		vector5[1]=[9,1,6];
+		vector5[2]=[5,4,1];
+
+		console.log(vector5);
+
+			
+			
+
+		for (var i = 0; i < vector5.length; i++) {
+
+			for (var j = 0; j < vector4.length; j++) {
+				if(j>i){vector5[i][j]=3;}
+				if(j==i){vector5[i][j]=1;}
+				if(j<i){vector5[i][j]=5;}
+			};
+		};
+		for (var i = 0; i < vector5.length; i++) {
+			for (var j = 0; j < vector5.length; j++) {
+				document.write(vector5[i][j]);
+			};
+			
+			document.write("<br>");
+		};
+		console.table(vector5);
+
+		vector6=new Array("A","C","B","D")
+		console.log(vector6.sort());
+
+		vector7=new Array(100,6,3,5,4,2)
+		console.log(vector7.reverse());
+		console.log(vector7.sort());
+
+
+		vector8=new Array(55,30,377,522,4,2)
+		function comparacionnumeros(a, b){
+			return a-b;
+		}
+
+		console.log(vector8.sort(comparacionnumeros));
+		console.log(vector7.sort(comparacionnumeros));
+		console.log(vector7.reverse(comparacionnumeros));
+
+		vector8.push("Z");
+		vector8.push("L");
+		console.log(vector8);
+		vector8.pop();
+		console.log(vector8);
+
+		console.log(vector8.indexOf("Z"))
+
+		var fruits =["Bannana","Orange","Apple","Mango"];
+		fruits.splice(2,1, "Lemon","Kiwi");
+		console.log(fruits);
+
+		// console.time(); console.timeEnd(); ve la velocidad de lo que tenga dentro
+
+		var fruits1 =["perro","elefante","gato"];
+		fruits1.splice(fruits1.indexOf("elefante"), 1);
+		console.log(fruits1);
+		fruits1.splice(fruits1.indexOf("gato"),0,"tigre");
+		console.log(fruits1);
+
+
+		var cambio =["ab","cd","bb","cc","ab"];
+		while(cambio.indexOf("ab")!=-1){
+		cambio.splice(cambio.indexOf("ab"), 1,"**");
+		}
+		console.log(cambio);
+		while(cambio.indexOf("**")!=-1){
+		cambio.splice(cambio.indexOf("**"), 1);
+		}
+		console.log(cambio);
+			
+		cambio.splice(cambio.indexOf("bb"), 2);
+		console.log(cambio);
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
