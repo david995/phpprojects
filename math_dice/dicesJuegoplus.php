@@ -58,21 +58,23 @@
         <input type="hidden" name="v6oculto" value="<?=$valor6;?>"/>
         
       </form>
-      <button id="black" onclick="imagen1()">prueba</button>
+      
       <script type="text/javascript" src="/math_dice/javascript/functionform.js"></script>
       
       <br>
       <div class="container">
         <div class="row">
-          <div style="border:solid 3px; width:550px; height:420px;" id="calccc"  class="col-sm-1">
+          <div style="width:550px; height:420px;" id="calccc"  class="col-sm-1">
              <img id="in1" style='display:none; float:left;' class="borde" src='dices_img/dado_<?=$valor1?>.png'>
              <img id="in2" style='display:none; float:left;'class="borde" src='dices_img/dado_<?=$valor2?>.png'>
              <img id="in3" style='display:none; 'class="borde" src='dices_img/dado_<?=$valor3?>.png'>
              <img id="in4" style='display:none; float:left;'class="borde" src='dices_img/dado_<?=$valor4?>.png'>
              <img id="in5" style='display:none;'class="borde" src='dices_img/dado_<?=$valor5?>.png'>
              
-              <A HREF="javascript:imgsuma()"><img id="suma"  style="position:absolute; bottom:40px;left:5px"  src='dices_img/suma.png'></A>
-              <A HREF="javascript:imgresta()"><img id="resta" style="position:absolute; bottom:65px; left:150px" src='dices_img/resta.png'></A>
+              <A HREF="javascript:imgsuma()"><img id="suma"  style="width:50px; position:absolute; bottom:40px;left:5px"  src='dices_img/suma.png'></A>
+              <A HREF="javascript:imgresta()"><img id="resta" style="width:50px; position:absolute; bottom:55px; left:80px" src='dices_img/resta.png'></A>
+              <A HREF="javascript:imgdivision()"><img id="division" style="width:50px; position:absolute; bottom:35px; left:160px" src='dices_img/division.png'></A>
+              <A HREF="javascript:imgmulti()"><img id="multi" style="width:50px; position:absolute; bottom:45px; left:250px" src='dices_img/asterisco.png'></A>
               <A HREF="javascript:imgigual()"><img id="igual" style="position:absolute; bottom:32px; left:350px" src='dices_img/igual.png'></A>
             
           </div>
@@ -112,7 +114,7 @@
             function imagen2(){
               document.getElementById('in2').style.display = 'block';
               document.getElementById('img2').style.display = 'none';
-              sumaop=sumaop+valor1;
+              sumaop=sumaop+valor2;
               operacion.value=sumaop;
               //document.forms.formulario.dado2.value=document.forms.formulario.v2oculto.value;
             }
@@ -149,6 +151,14 @@
             
             function imgresta(){
               sumaop=sumaop+"-";
+              operacion.value=sumaop;
+            }
+            function imgmulti(){
+              sumaop=sumaop+"*";
+              operacion.value=sumaop;
+            }
+            function imgdivision(){
+              sumaop=sumaop+"/";
               operacion.value=sumaop;
             }
             

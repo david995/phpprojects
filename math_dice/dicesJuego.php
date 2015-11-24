@@ -58,13 +58,13 @@
         <input type="hidden" name="v6oculto" value="<?=$valor6;?>"/>
         
       </form>
-      <button id="black" onclick="imagen1()">prueba</button>
+      
       <script type="text/javascript" src="/math_dice/javascript/functionform.js"></script>
       
       <br>
       <div class="container">
         <div class="row">
-          <div style="border:solid 3px; width:550px; height:420px;" id="calccc"  class="col-sm-1">
+          <div style=" width:550px; height:420px;" id="calccc"  class="col-sm-1">
              <img id="in1" style='display:none; float:left;' class="borde" src='dices_img/dado_<?=$valor1?>.png'>
              <img id="in2" style='display:none; float:left;'class="borde" src='dices_img/dado_<?=$valor2?>.png'>
              <img id="in3" style='display:none; 'class="borde" src='dices_img/dado_<?=$valor3?>.png'>
@@ -112,7 +112,7 @@
             function imagen2(){
               document.getElementById('in2').style.display = 'block';
               document.getElementById('img2').style.display = 'none';
-              sumaop=sumaop+valor1;
+              sumaop=sumaop+valor2;
               operacion.value=sumaop;
               //document.forms.formulario.dado2.value=document.forms.formulario.v2oculto.value;
             }

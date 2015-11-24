@@ -48,7 +48,7 @@ $menu=array(
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class='navbar-brand' href='#'><?php echo $menu["titulo"][$lenguaje]?></a> <!-- TÍTULO -->
+      <a class='navbar-brand' href='iniciosesion.php'><?php echo $menu["titulo"][$lenguaje]?></a> <!-- TÍTULO -->
     </div>
     <div>
       <ul class="nav navbar-nav">
