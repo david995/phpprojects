@@ -1,7 +1,8 @@
 <?php
 
-include('jugador.php');
-session_start(); 
+include('lib/jugador.php');
+session_start();
+
 ?>
 
 <html>
@@ -10,9 +11,9 @@ session_start();
   <body>
       <img id="fondo" src="dices_img/fondo.png.jpg"></img>
 
-<form id="forminiciosesion" method="post" action="Juego.php" >
+<form id="forminiciosesion" method="post" action="Modalidades.php" >
  <div style="padding:15px;">Nombre: <input id="black" type="text" name="nombre" style="width:100px;"/>
- <input type="hidden" name="jugador">
+ <input type="hidden" name="jugador"><!-- HIDDEN PARA COMPROVAR EL JUGADOR MAS ADELANTE-->
   <br>
   <br>
   

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
 
-include('jugador.php');
+include('lib/jugador.php');
 session_start();
 
 if(isset($_POST['jugador'])){

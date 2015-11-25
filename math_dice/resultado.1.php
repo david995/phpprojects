@@ -1,7 +1,9 @@
 
 <?php
-	include('jugador.php');
+include('lib/jugador.php');
 session_start();
+//RECOGIDA DE DATOS MEDIANTE GET QUE LE PASA EL SCRIPT A RESULTADO.PHP
+
 $resultado=$_GET["resultado"];
 $dodecaedro=$_GET["dodecaedro"];
 
@@ -35,13 +37,15 @@ $jugador1->setPUNTOS($ptos);
  
  
 ?><center>
-<div style="margin-top:15%;">
+<div style="margin-top:13%;">
           <font size="35">¡¡¡HAS GANADO UN PUNTO!!!</font>
+          <a href="Modalidades.php"><img src="dices_img/continuar.png" /></a>
 </div> 
 </center>
 <?php
 }else{
 	echo "Intentalo de nuevo";
+	?> <a href="Modalidades.php"><img src="dices_img/continuar.png" /></a><?php
 }
 ?>
 <!DOCTYPE html>

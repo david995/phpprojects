@@ -52,7 +52,7 @@ $menu=array(
     </div>
     <div>
       <ul class="nav navbar-nav">
-         <li class='active'><a href='Juego.php'><?=$menu["inicio"][$lenguaje]?></a></li> <!-- INICIO -->
+         <li class='active'><a href='Modalidades.php'><?=$menu["inicio"][$lenguaje]?></a></li> <!-- INICIO -->
          <li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' href='#'><?=$menu["juegos"][$lenguaje]?><span class='caret'></span></a> <!-- INICIO DEL SUBMENÚ -->
           <ul class='dropdown-menu'>
             <?php
@@ -81,7 +81,7 @@ $menu=array(
 		    <?php
 		        if(isset($jugador1)){
 		    ?>
-	           Jugador: <?=$jugador1->getNOMBRE()?> <br> Puntos: <?=$jugador1->getPUNTOS()?>
+	           Jugador: <?=$jugador1->getNOMBRE()?> <br> Puntos: <?=$jugador1->getPUNTOS() //MUESTRA EL NOMBRE DEL JUGADOR Y LOS PUNTOS DE ESTE ?>
 	       <?php
 		        }else{
 	       ?>

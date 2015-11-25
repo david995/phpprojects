@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
 
-include('jugador.php');
+include('lib/jugador.php');
 session_start();
 
 if(isset($_POST['jugador'])){
@@ -32,7 +32,7 @@ if(isset($_POST['jugador'])){
 <html lang="en">
 <head>
   <title>Bootstrap Case</title>
-  
+  <link rel="stylesheet" type="text/css" href="css/estilo1.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">

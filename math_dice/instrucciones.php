@@ -1,5 +1,5 @@
 <?php
-include('jugador.php');
+include('lib/jugador.php');
 session_start();
 
 
