@@ -1,5 +1,4 @@
-
-	        var img1 = document.getElementById('img1');
+ var img1 = document.getElementById('img1');
             var img2 = document.getElementById('img2');
             var img3 = document.getElementById('img3');
             var img4 = document.getElementById('img4');
@@ -72,6 +71,14 @@
               sumaop=sumaop+"-";
               operacion.value=sumaop;
             }
+            function imgmulti(){
+              sumaop=sumaop+"*";
+              operacion.value=sumaop;
+            }
+            function imgdivision(){
+              sumaop=sumaop+"/";
+              operacion.value=sumaop;
+            }
             
             function imgigual(){
               console.log(sumaop);
@@ -80,4 +87,3 @@
               //operacion.value=resultado;
               window.location="resultado.1.php?resultado="+resultado+"&dodecaedro="+valor6;
             }
-            

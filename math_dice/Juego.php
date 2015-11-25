@@ -15,7 +15,7 @@ if(isset($_POST['jugador'])){
           //Inicializamos al jugador
           $_SESSION['jugador'] = $jugador1;
         }
-    }
+}
  //Comprobamos un objeto creado en la sesion
     if (isset($_SESSION['jugador'])) {
         $jugador1 = $_SESSION['jugador'];

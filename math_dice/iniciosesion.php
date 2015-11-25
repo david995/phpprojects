@@ -1,8 +1,6 @@
 <?php
-
 include('lib/jugador.php');
 session_start();
-
 ?>
 
 <html>

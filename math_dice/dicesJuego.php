@@ -32,8 +32,8 @@
     <div class="col-sm-1"><A HREF="javascript:imagen2()"><img id="img2" class="borde" src='dices_img/dado_<?=$valor2?>.png'></A></div>
     <div class="col-sm-1"><A HREF="javascript:imagen3()"><img id="img3" class="borde" src='dices_img/dado_<?=$valor3?>.png'></A></div>
     <div class="col-sm-1"><A HREF="javascript:imagen4()"><img id="img4" class="borde" src='dices_img/dado_<?=$valor4?>.png'></A></div>
-    <div class="col-sm-2"><A HREF="javascript:imagen5()"><img id="img5" class="borde" src='dices_img/dado_<?=$valor5?>.png'></A></div>
-    <div class="col-sm-1"><img id="img5" class="borde" src='dices_img/dodecaedro_<?=$valor6?>.png'></div>
+    <div class="col-sm-1"><A HREF="javascript:imagen5()"><img id="img5" class="borde" src='dices_img/dado_<?=$valor5?>.png'></A></div>
+    <div class="col-sm-3"><img id="img5" class="borde" src='dices_img/dodecaedro_<?=$valor6?>.png'></div>
     <div class="col-sm-4" >
       <form id="formdices" style="width:550px; height:125px;" name="formulario" ><!-- FORMULARIO PARA MOSTRAR LA OPERACION QUE SE VA HACIENDO -->
         
@@ -57,7 +57,7 @@
         
       </form>
       
-      <!-- SEGUNDO CONTENEDOR DE BOOSTRAP PARA MOSTRAR LAS IMAGENES HIDDEN Y LA DE LAS OPERACIONES -->
+      <!-- SEGUNDO CONTENEDOR -->
       
       <br>
       <div class="container">

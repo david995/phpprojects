@@ -3,9 +3,9 @@ class Jugador{
     
     //VARIABLES DE JUGADOR
     
-        private $nombre = 'Jugador 1'; //le damos un valor predeterminado
-        private $apellidos = 'Apellidos 1';
-        private $edad = 0;
+        public $nombre = 'Jugador 1'; //le damos un valor predeterminado
+        public $apellidos = 'Apellidos 1';
+        public $edad = 0;
         public $puntos =0;
     
     //CONSTRUCTOR JUGADOR
