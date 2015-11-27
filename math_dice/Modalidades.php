@@ -2,7 +2,6 @@
 <?php
 include('lib/jugador.php');
 session_start();
-
 if(isset($_POST['jugador'])){
         //Comprobamos un objeto creado en la sesion
         if (!isset($_SESSION['jugador'])) {
@@ -20,8 +19,6 @@ if(isset($_POST['jugador'])){
         $jugador1 = $_SESSION['jugador'];
         
     }
-
-
    
 include('configuracion.php');
 ?>

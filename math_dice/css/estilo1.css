@@ -58,6 +58,21 @@ bborder-radius: 38px 38px 38px 38px;
 border: 8px double #212121;
 }
 
+#formperfil{
+  
+border:solid;
+padding:1em;
+overflow: hidden;
+
+background-color:#424242;
+width: 200px;
+height: 200px;
+bborder-radius: 38px 38px 38px 38px;
+-moz-border-radius: 38px 38px 38px 38px;
+-webkit-border-radius: 38px 38px 38px 38px;
+border: 8px double #212121;
+}
+
 
     .invisible {
       visibility:hidden;

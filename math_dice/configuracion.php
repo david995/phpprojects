@@ -40,6 +40,8 @@ $menu=array(
 	);
 	
 
+$nombre=$jugador1->getNOMBRE();
+$edad=$jugador1->getEDAD();
 
 ?>
 
@@ -68,6 +70,7 @@ $menu=array(
         <li class='active'><a href='instrucciones.php'><?=$menu["info"][$lenguaje]?></a></li> <!-- INSTRUCCIONES -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
+      	<li><a href="perfil.php?nombre=<?=$nombre?>&edad=<?=$edad?>">Perfil</a></li>
       <li><a href="<?=$_SERVER['PHP_SELF']?>?lenguaje=es"><img style="width:35px; heigth:35px;" src="dices_img/banderaes.jpg" /></a></li>
       <li><a href="<?=$_SERVER['PHP_SELF']?>?lenguaje=en"><img style="width:35px; heigth:35px;" src="dices_img/banderain.png" /></a></li>
     </ul>
